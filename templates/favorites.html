@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Công thức yêu thích</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Trang chủ</a> | <b>Món yêu thích của tôi</b>
+    </nav>
+
+    <div class="container">
+        <h2>Danh sách yêu thích (UC 10)</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <h3>Phở Bò Hà Nội</h3>
+                <p>Mức độ: Khó</p>
+                <a href="/recipe/1">Xem chi tiết</a> | 
+                <a href="#" style="color: red;">Xóa khỏi yêu thích</a>
+            </div>
+
+            <div class="recipe-card">
+                <h3>Gỏi Cuốn</h3>
+                <p>Mức độ: Dễ</p>
+                <a href="/recipe/2">Xem chi tiết</a> | 
+                <a href="#" style="color: red;">Xóa khỏi yêu thích</a>
+            </div>
+        </div>
+        
+        {% if not recipes %}
+        <p>Bạn chưa lưu công thức nào.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

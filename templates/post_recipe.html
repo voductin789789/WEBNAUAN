@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Công Thức Mới</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Trang chủ</a> | <a href="/profile">Trang cá nhân</a>
+    </nav>
+
+    <div class="container">
+        <h2>Chia sẻ công thức của bạn (UC 8)</h2>
+        <form action="/" method="post">
+            <label>Tên món ăn:</label>
+            <input type="text" name="title" placeholder="VD: Phở bò" required>
+
+            <label>Danh mục (UC 13):</label>
+            <select name="category">
+                <option value="Main">Món chính</option>
+                <option value="Dessert">Món tráng miệng</option>
+                <option value="Veggie">Món chay</option>
+                <option value="Asia">Món Á</option>
+                <option value="Euro">Món Âu</option>
+            </select>
+
+            <label>Nguyên liệu (Mỗi nguyên liệu một dòng):</label>
+            <textarea name="ingredients" rows="5" placeholder="VD: 500g thịt bò..."></textarea>
+
+            <label>Các bước thực hiện:</label>
+            <textarea name="steps" rows="8" placeholder="Bước 1: Sơ chế..."></textarea>
+
+            <div style="display: flex; gap: 10px;">
+                <button type="submit">Đăng công thức</button>
+                <button type="button" onclick="history.back()" style="background:#ccc; color:black">Hủy</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

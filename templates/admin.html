@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Bảng điều khiển Admin</h2>
+    <h3>Quản lý công thức</h3>
+    <table border="1" width="100%">
+        <tr><th>ID</th><th>Tên món</th><th>Hành động</th></tr>
+        {% for r in recipes %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.title }}</td>
+            <td><button style="background:red">Xóa bài</button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
